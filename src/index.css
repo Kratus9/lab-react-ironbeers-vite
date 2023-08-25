@@ -19,3 +19,7 @@ form {
 .btn-round {
   margin: 20px;
 }
+
+.navbar-link {
+  background-color: aqua;
+}
