@@ -1,3 +1,5 @@
-function BeerDetailsPage() {}
+function BeerDetailsPage() {
+    
+}
 
 export default BeerDetailsPage;
