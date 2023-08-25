@@ -1,6 +1,11 @@
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { Routes, Route } from ""
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AllBeersPage from "./pages/AllBeersPage";
+import BeerDetailsPage from "./pages/BeerDetailsPage";
+import RandomBeerPage from "./pages/RandomBeerPage";
+import AddBeerPage from "./pages/AddBeerPage";
 
 function App() {
   return (
@@ -8,11 +13,11 @@ function App() {
       <Navbar />
       <h1>LAB | React IronBeers</h1>
       <Routes>
-        <Route to={`/`}>Home</Route>
-        <Route to={`/beers`}>All Beers</Route>
-        <Route to={`/random-beer`}>Random Beer</Route>
-        <Route to={`/new-beer`}>New Beer</Route>
-        <Route to={`/beers/:beerId`}>Beer Details</Route>
+        <Route path="/" element={ <HomePage /> }/>
+        <Route path="/beers" element={ <AllBeersPage /> }/>
+        <Route path="/random-beer" element={ <RandomBeerPage /> }/>
+        <Route path="/new-beer" element={ <AddBeerPage /> }/>
+        <Route path="/beers/:beerId" element={ <BeerDetailsPage /> }/>
       </Routes>
     </div>
   );
