@@ -13,7 +13,7 @@ function AllBeersPage() {
     const getAllBeers = async () => {
         try {
             const response = await axios.get("https://ih-beers-api2.herokuapp.com/beers")
-            setBeers(response)
+            setBeers(response.data)
         } catch (error) {
             console.log(error)
         }
@@ -26,7 +26,7 @@ function AllBeersPage() {
     if(!beers) {
         return <p>... Loading</p>
     }
-    
+
     return (
         <div>
 
