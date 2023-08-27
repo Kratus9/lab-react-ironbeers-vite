@@ -6,18 +6,20 @@ function RandomBeerPage() {
   const [randomBeer, setRandomBeer] = useState(null);
 
   useEffect(() => {
-    getRandomBeer()
+    getRandomBeer();
   }, []);
 
   const getRandomBeer = async () => {
     try {
-        const response = await axios.get('https://ih-beers-api2.herokuapp.com/beers/random')
-        console.log(response.data)
-        setRandomBeer(response.data)
+      const response = await axios.get(
+        "https://ih-beers-api2.herokuapp.com/beers/random"
+      );
+      console.log(response.data);
+      setRandomBeer(response.data);
     } catch (error) {
-        console.log(error)
+      console.log(error);
     }
-  }
+  };
 
   if (!randomBeer) {
     return <p>... Loading</p>;
@@ -25,7 +27,7 @@ function RandomBeerPage() {
 
   return (
     <div>
-        <h1 className="title">{randomBeer.name}</h1>
+      <h1 className="title">{randomBeer.name}</h1>
       <div className="wrapper">
         <div>
           <img width={100} src={randomBeer.image_url} alt={randomBeer.name} />

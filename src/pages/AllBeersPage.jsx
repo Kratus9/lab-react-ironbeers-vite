@@ -35,7 +35,7 @@ function AllBeersPage() {
           {beers.map((beer) => (
             <li key={beer._id} className="card-container">
               <Link to={`/beers/${beer._id}`}>
-                <img src={beer.image_url} alt={beer.name} height={250}/>
+                <img src={beer.image_url} alt={beer.name}/>
                 <h2>{beer.name}</h2>
                 <p>{beer.tagline}</p>
                 <p>Created by: {beer.contributed_by}</p>
